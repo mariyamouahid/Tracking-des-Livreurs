@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="418.0" prefWidth="482.0" spacing="20.0" style="-fx-background-color: #c9a698;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.fstt.trackingl.CommandeController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <Label text="Livreur de la commande :">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomm" />
+      <Label text="Date de la commande:">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Date" />
+      <Button fx:id="okk" mnemonicParsing="false" onAction="#onSaveButtonClick" prefHeight="26.0" prefWidth="508.0" style="-fx-background-color: #C2CAD0;" text="Ajouter">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="modd" mnemonicParsing="false" onAction="#ModifierTable" prefHeight="26.0" prefWidth="452.0" style="-fx-background-color: #C2CAD0;" text="Modifier">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button fx:id="supp" mnemonicParsing="false" onAction="#DeleteTable" prefHeight="26.0" prefWidth="485.0" style="-fx-background-color: #C2CAD0;" text="Supprimer">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="mytable" onMouseClicked="#tblDataMouseClicked" prefHeight="200.0" prefWidth="200.0">
+         <columns>
+            <TableColumn fx:id="col_idd" prefWidth="75.0" text="id" />
+            <TableColumn fx:id="col_nomLvr" prefWidth="75.0" text="Liveur_Cmd" />
+            <TableColumn fx:id="col_date" prefWidth="75.0" text="Date" />
+         </columns>
+      </TableView>
+   </children>
+</VBox>

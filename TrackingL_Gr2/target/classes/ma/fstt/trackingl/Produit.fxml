@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="498.0" prefWidth="495.0" spacing="20.0" style="-fx-background-color: #c9a698;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.fstt.trackingl.ProduitController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <Label text="Produit Appartient à la Commande:">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomC" />
+      <Label text="Description:">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="desc" prefHeight="26.0" prefWidth="334.0" />
+      <Label text="Prix de produit:">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="prx" />
+      <Button fx:id="okkk" mnemonicParsing="false" onAction="#onSaveButtonClick" prefHeight="26.0" prefWidth="508.0" style="-fx-background-color: #C2CAD0;" text="Ajouter">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="moddd" mnemonicParsing="false" onAction="#ModifierTable" prefHeight="26.0" prefWidth="452.0" style="-fx-background-color: #C2CAD0;" text="Modifier">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button fx:id="suppp" mnemonicParsing="false" onAction="#DeleteTable" prefHeight="26.0" prefWidth="485.0" style="-fx-background-color: #C2CAD0;" text="Supprimer">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="mytable" onMouseClicked="#tblDataMouseClicked" prefHeight="200.0" prefWidth="200.0">
+         <columns>
+            <TableColumn fx:id="col_idP" prefWidth="75.0" text="id" />
+            <TableColumn fx:id="col_nomCmd" prefWidth="75.0" text="Commande" />
+            <TableColumn fx:id="col_dsc" prefWidth="75.0" text="Description" />
+            <TableColumn fx:id="col_prx" prefWidth="75.0" text="Prix (DH)" />
+         </columns>
+      </TableView>
+   </children>
+</VBox>

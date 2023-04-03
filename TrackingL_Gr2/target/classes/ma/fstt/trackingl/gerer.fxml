@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="387.0" prefWidth="518.0" spacing="20.0" style="-fx-background-color: #c9a698;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.fstt.trackingl.GererController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Gérer:" textAlignment="CENTER" wrappingWidth="407.3695526123047">
+         <font>
+            <Font name="Times New Roman" size="33.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnlivreur" mnemonicParsing="false" onAction="#switchToLivreur" prefHeight="75.0" prefWidth="481.0" style="-fx-background-color: #C2CAD0;" text="LIVREUR">
+         <font>
+            <Font name="Times New Roman" size="17.0" />
+         </font></Button>
+      <Button fx:id="btncmnd" mnemonicParsing="false" onAction="#switchToCommande" prefHeight="75.0" prefWidth="480.0" style="-fx-background-color: #C2CAD0;" text="COMMANDE">
+         <font>
+            <Font name="Times New Roman" size="17.0" />
+         </font></Button>
+      <Button fx:id="btnprd" mnemonicParsing="false" onAction="#switchToProduit" prefHeight="75.0" prefWidth="480.0" style="-fx-background-color: #C2CAD0;" text="PRODUIT">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+   </children>
+</VBox>
